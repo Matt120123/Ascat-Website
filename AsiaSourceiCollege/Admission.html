@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Landing Page</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./src/Asic-Image/Asic-Logo.png" />
+    <link rel="stylesheet" href="/AsiaSourceiCollege/css/admission.css">
+    <link rel="stylesheet" href="css/Complaint.css">
+
+</head>
+<body>
+    <header class="Head">
+        <a href="/AsiaSourceiCollege/Home.html" class="logo-pos"><img class="asic-logo" src="/AsiaSourceiCollege/src/Asic-Image/Asic-Log.png" alt="Asia Source iCollege"></a> 
+        <nav>
+         <ul class="menu">
+             <li><a href="./Home.html" class="nav1">Home</a></li>
+            
+             <li class="navdown"> 
+                <a href="/AsiaSourceiCollege/AboutUs.html#10th" class="nav1">About <!-- <img class="arrow-down" src="./src/Asic-Image/Caret.png" alt="carret-down">--></a>
+                <!-- <div>
+                    <ul  class="dropdown_menu">
+                      <li><a href="#">Organizational Chart</a></li>
+                        <li><a href="/AsiaSourceiCollege/AboutUs.html#10th">About ASiC</a></li>
+                        <li><a href="#">Facilities</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+              -->
+            </li>
+
+            <!--
+            <li class="navdown1"><a href="./Programs-SeniorHighSchool.html" class="nav1">Programs<img class="arrow-down" src="./src/Asic-Image/Caret.png" alt="carret-down"></a>
+                <div>
+                    <ul  class="dropdown_menu_programs">
+                        <li><a href="./Programs-SeniorHighSchool.html">Senior High School</a></li>
+                        <li><a href="./Programs-SeniorHighSchool.html">Training & Assessment</a></li>
+                        <li><a href="./Programs-SeniorHighSchool.html">TESDA Scholarship</a></li>
+                      </ul>
+                  </div>
+              </li>
+              -->
+             <li class="navdown2"><a href="./Admission.html" class="active">Admission</a>
+                 <!-- <div class="adm">
+                     <ul  class="dropdown_menu_admission ">
+                         <li><a href="./Admission.html">Senior High School</a></li>
+                        <li><a href="./AssesmentApplication.html">Training & Assessment</a></li> 
+                         <li><a href="./Admission.html#req-sec">Admission Requirements</a></li>
+                             <li><a href="./Admission.html#freq-sec">FAQ's</a></li>
+                     </ul>
+                 </div> -->
+             </li>
+             <li class="navdown4"><a href="#" class="nav1" onclick="redirectToSearch('Events')">EVENTS</a>
+                <div>
+                  <ul  class="dropdown_menu_updates">
+                      <!-- <li><button data-category="Announcement" onclick="redirectToCategory('Announcement')">Announcement</button></li> -->
+                      <!-- <li><button data-category="Events" onclick="redirectToCategory('Events')">Events</button></li> -->
+                     <!-- <li><button data-category="News" onclick="redirectToCategory('News')">News</button></li> -->
+                  </ul>
+              </div>
+              </li> 
+            <li class="navdown5"><a href="Requestform.html" class="nav1">Contact</a>
+                <!-- <div>
+                    <ul class="dropdown_menu_contact">
+                        <li><a href="./Contact.html">COMPLAINT</a></li>
+                        <li><a href="./Requestform.html">REQUEST</a></li>
+                    </ul>
+                </div> -->
+            </li>
+            
+         </ul>
+        </nav>
+        <nav>
+         <ul class="TOGGLE">
+             <li class="navdown3"> <a href="#" class="TOGGLE"><img class="TOGGLE" src="/asiasource/toggle.png" alt=""></a>
+             </li>
+         </ul>
+        </nav>
+     </header>
+
+    <main class="main">
+        <section class="register-now-section">
+            <h2>REGISTER NOW</h2>
+            <p>Click the button below to proceed to the admission form:</p>
+            <a href="./Admission-Portal.html" class="register-btn">REGISTER</a>
+        </section>
+    
+        <section class="requirements-section">
+            <h2 id="req-sec">REQUIREMENTS FOR ENROLLMENT</h2 >
+            <div class="requirements-list">
+                <h3>I. NEW STUDENTS</h3>
+                <ul>
+                    <li>Original Form-138 (Grade 10 Report Card)</li>
+                    <li>Original Certificate of Good Moral Character from high school</li>
+                    <li>Original Form-137</li>
+                    <li>Original Copy of NCAE Results</li>
+                    <li>Photocopy of PSA/NSO birth certificate</li>
+                    <li>Fully accomplished SHS Admission and Registration Form</li>
+                    <li>4 pieces of 2x2 ID pictures</li>
+                    <li>ESC Certification Letter from Junior High School Principal (ESC Grantees Only)</li>
+                    <li>ESC Certificate (ESC Grantees Only)</li>
+                </ul>
+    
+                <h3>II. TRANSFEREES</h3>
+                <ul>
+                    <li>Original Grade 11/12 Report Card</li>
+                    <li>Original Certificate of Good Moral Character</li>
+                    <li>Certificate of Eligibility to Transfer</li>
+                    <li>Certificate of Release of Voucher Program Beneficiary (Originating School)</li>
+                    <li>Photocopy of PSA/NSO birth certificate</li>
+                    <li>Fully accomplished SHS Admission and Registration Form</li>
+                    <li>4 pieces of 2x2 ID pictures</li>
+                </ul>
+    
+                <h3>III. RETURNING/OLD STUDENTS</h3>
+                <ul>
+                    <li>Grade 11 or Grade 12 Report Card</li>
+                </ul>
+    
+                <h3>IV. ALS OR NFE (NON-FORMAL EDUCATION)</h3>
+                <ul>
+                    <li>Original Certificate of Rating (with passing marks in all subjects)</li>
+                    <li>Original Certificate of Good Moral Character</li>
+                    <li>Photocopy of PSA/NSO birth certificate</li>
+                    <li>Fully accomplished SHS Admission and Registration Form</li>
+                    <li>4 pieces of 2x2 ID pictures</li>
+                </ul>
+            </div>
+        </section>
+    
+        <section class="faq-section">
+            <h2 id="freq-sec">FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Question 1. Where is Asia Source iCollege located?</h3>
+                    <p>As for Taguig Branch it is located at 4th Floor Gate 3 Plaza, Lawton Avenue corner Juliano St., AFPOVAI Phase III, Western Bicutan, Taguig City 1630 8553-5202 | 0939-1167353.
+                        
+                        As for Pasig Branch its located at 3/F One Victoria Plaza, A. Mabini St. Kapasigan, Pasig City 8637-9895 | 0961-7430541 | 0977-7855289</p>
+                </div>
+    
+                <div class="faq-item">
+                    <h3>Question 2. Is there an entrance exam?</h3>
+                    <p>None, there is no entrance exam here at Asia Source iCollege!</p>
+                </div>
+    
+                <div class="faq-item">
+                    <h3>Question 3. How to enroll?</h3>
+                    <p>You can click the register button above or go to the header and click on admissions!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <footer class="footer">
+        <div class="footer-content">
+      
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <a href="./AboutUs.html"><summary>About ASiC</summary></a>
+                <a href="./Programs-SeniorHighSchool.html"><summary>Programs</summary></a>
+                <a href="./Admission.html"><summary>Admission</summary></a>
+                  <a href="./Contact.html"><summary>Contact Us</summary></a>
+              
+            </div>
+            <div class="footer-section addresses">
+                
+                <h3>Taguig Campus</h3>
+                <p><img class="location-img" src="./images/Location.png" alt="carret-down">4th Floor Gate 3 Plaza, Lawton Avenue corner Juliano St.,
+      
+                  AFPOVAI Phase III, Western Bicutan, Taguig City 1630 </p> <br>
+                  <p><img class="location-img" src="./images/contacts.png" alt="carret-down">8553-5202 | 0939-1167353</p>
+                 <br>
+                <h3>Pasig Campus</h3>
+                <p><img class="location-img" src="./images/Location.png" alt="carret-down">3/F One Victoria Plaza, A. Mabini St. Kapasigan, Pasig City</p> <br>
+                  <p><img class="location-img" src="./images/contacts.png" alt="carret-down">8637-9895 | 0961-7430541 | 0977-7855289</p>
+                 <br>
+                  <h3>Business Hours</h3>
+                  <p><img class="location-img" src="./src/Asic-Image/Time.png" alt="carret-down">7:00 AM - 5:00 PM</p>
+                  <br>
+            </div>
+            <div class="footer-section-social-links">
+                <h3>#ASiC On</h3>
+                <a href="https://www.facebook.com/asiasourceph"><img src="./src/Social-Image/Facebook-logo.png" alt="Facebook"></a>
+                <a href="https://www.messenger.com/t/494884660692040/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0"><img src="./src/Social-Image/Messenger.png" alt="Messenger"></a>
+                <a href="#"><img src="./src/Social-Image/Twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/asiasourceph_official/"><img src="./src/Social-Image/Instagram.png" alt="Instagram"></a>
+                <a href="https://www.instagram.com/asiasourceph_official/"><img src="./src/Social-Image/tiktok.png" alt="Tiktok"></a>
+                <a href="https://www.youtube.com/@asiasourceicollege5754"><img src="./src/Social-Image/Youtube-logo.png" alt="Youtube"></a>
+            </div>
+           <div class="footer-section vision-mission">
+                      <h3>Vision, Mission, Core Values</h3>
+                      <details>
+                          <summary><img class="arrow-down" src="/AsiaSourceiCollege/images/caret1.png" alt="carret-down">Vision</summary>
+                          <p>Asia Source envisions to be the premier institution
+                             that produces morally upright leaders with technological
+                              and entreprenuerial expertise and is actively responsive
+                               to the challenges and the needs of the global market.
+                                It values the presence of its workforce, thus,
+                                 it provides equal opportunities for total growth
+                                  and development through dynamic and strategic leadership,
+                                   enhancing the skills and abilities to become world
+                                    class business partners.</p>
+                      </details>
+                      <details>
+                          <summary><img class="arrow-down" src="/AsiaSourceiCollege/images/caret1.png" alt="carret-down">Mission</summary>
+                          <p>Asia Source iCollege has an ardent commitment for excellence.
+                             It provides a high quality education with an innovative way of 
+                             thinking through its work of the art and dynamic facilties. This
+                              educational institution is the avenue where character is indoctrinated
+                               to its stakeholders to become value-oriented leaders with
+                                emphasis on integrity, discipline, compassion, and respect. Thus,
+                                 emanate leaders who are well-rounded with a sense of global success
+                                  through innovation, collaboration, and a spirit of passion and determination
+                                   in every endeavor they traverse.</p>
+                      </details>
+                      <details>
+                          <summary><img class="arrow-down" src="/AsiaSourceiCollege/images/caret1.png" alt="carret-down">Core Values</summary>
+                           
+                            <p>
+                              <br>
+                              <strong>SELF-DISCIPLINE (Disiplina sa sarili) </strong><br>
+                              <br>
+                              It is the manifestation to forego instant fulfilment in goodwill of something better, but rather is the aptitude of the person to fuse to actions, thoughts and behaviour, which lead to success, in spite of challenges and adversities of life. <br>
+                            <br>
+                            <strong>INTEGRITY (Pagkamatuwid)</strong><br>
+                            <br>
+                              It is the moral compass of doing the right actions that would do nothing to dishonour your true self. <br>
+                            <br>
+                            <strong>RESPECT (Paggalang)</strong><br>
+                            <br>
+                            It is the high esteem and care of showing value to another being and nature. It is the unspoken communication
+                             which builds strong relations towards people, world and nature.
+      
+                            <br>
+                            <br>
+                            <strong>COMPASSION (Malasakit)</strong><br>
+                            <br>
+                            It is to recognize the suffering of others and take action to help and touching the heart of a man regardless of the stature of one’s life. <br>
+                            <br>
+                            <strong>SERVICE (Paglilingkod)</strong><br>
+                            <br>
+                            It is the diligence and selflessly giving time and effort in fulfilling the needs of another individual and see it through to completion. <br>
+                            <br>
+                            <strong>EXCELLENCE (Kahusayan)</strong><br>
+                            <br>
+                            We surpass mediocrity and believes in the fundamental purpose of quality education through innovation and continuous development of curricula,
+                             instruction material, facilities and equipment and the major key source of information of the students- the professional character and expertise
+                              of the institution’s officials, instructors and staff to produce distinct and exceptional graduates. <br>
+                            <br>
+                            
+                            </p>
+                          
+                      </details>
+                  </div>
+              </div>
+       
+      </footer>
+      <footer  class="footer-w">
+        <div class="footer-bottom">
+          <div class="footer-section-partners">
+            <h3>Social Links</h3>
+            <a href="#"><img src="./src/Asic-Image/ASIC-logo.png" alt="ASIASOURCEiCOLLEGE"></a>
+            <img src="./src/Asic-Image/Deped.png" alt="Deped">
+            <img src="./src/Asic-Image/Tesda.png" alt="TESDA">
+            <img src="./src/Asic-Image/peac1.png" alt="peac1">
+            <img src="./src/Asic-Image/EdukasyonPH-logo.png" alt="EdukasyonPH-logo">
+        </div>
+          <p class="developed-by">Developed by BEERPS</p>
+            <p class="copyright">Asia Source iCollege. &copy; 2024 All rights reserved.</p>
+      
+          <p class="privacy-policy"><a href="#">Privacy Policy</a></p>
+        
+      </div>
+      </footer>
+
+</body>
+</html>
+<script src="script.js"></script>

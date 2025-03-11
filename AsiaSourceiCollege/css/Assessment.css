@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+body {
+    font-family: 'PT Serif', serif;
+    font-size: 16px;
+     line-height: 1.5;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #1E38A8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* logo */
+.logo {
+    display: flex;
+    margin: 0 auto 0px;
+    max-width: 80px;    
+}
+
+
+.container {
+    width: 100%;
+    margin: auto;
+    background: white;
+    padding: 3%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    color: #1E38A8;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.progress-bar .step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: 800;
+    background: #ddd;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress-bar .step.completed .step-number {
+    display: none;
+}
+
+.progress-bar .step.completed  {
+    background-color: #1E38A8;
+}
+
+.progress-bar .step.completed .step-img {
+    display: block;
+}
+
+.progress-bar .step-img {
+    display: none;
+    width: 16px;
+    height: 16px;
+}
+
+.progress-bar .progress-line {
+    flex: 1;
+    height: 4px;
+    background: #ddd;
+}
+
+.progress-bar .step.completed + .progress-line {
+    background: #1E38A8;
+}
+
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+label .required {
+    color: red;
+}
+
+.guide
+{
+    color: #646464;
+    font-size: .7rem;
+    font-weight: 700;
+    text-align: left;
+}
+.guide-1
+{
+    color: #646464;
+    font-size: .9rem;
+    font-weight: 700;
+    text-align: left;
+}
+.summary-review
+{
+    display: flex;
+}
+.summary-review p
+{
+    
+}
+.radio-inp-sec
+{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: 0 auto;
+}
+.radio-inp-sec input[type="radio"] {
+    width: auto;
+    transform: scale(1.5); 
+    margin-top: 13px;
+    margin-right: 10px;
+  }
+
+.same-address, .pri-dis-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .same-address input[type="checkbox"], .pri-dis-check input[type="checkbox"] {
+    width: auto;
+    accent-color:#1E38A8;
+    transform: scale(2); 
+    margin-top: 13px;
+    margin-right: 10px;
+  }
+
+input, select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+input:focus ,select:focus
+{
+    outline-width: thin;
+    outline-color: #16327a;
+}
+
+select, input[type="date"],input[type="checkbox"]{
+    cursor: pointer;
+}
+input:invalid, select:invalid {
+    border-color: #ddd;
+}
+
+.invalid {
+    border-color: #1E38A8;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 30px;
+    border: none;
+    background: none;
+    border: #1E38A8 solid 2px;
+    color: #1E38A8;
+    font-weight: 800;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #16327a;    
+    border: #fff solid 2px;
+    color: #fff;
+}
+
+button:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+}
+
+.radio-group label {
+    text-align: left;
+}
+
+/* Info Containers */
+.info-container, .info-container-rev {
+    border: 2px solid #ddd;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-container:hover ,.info-container-rev:hover{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;  
+    transform: translateY(-5px); 
+}
+
+.info-container h3, .info-container-rev h3 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.info-container .icon, .info-container-rev .icon {
+    margin-right: 5px;
+    width: 26px;
+    height: 26px;
+}
+.info-container-rev p{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #adadad;   
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-row .col {    
+    flex: 1;
+    min-width: 20%;
+    margin-right: 20px;
+}
+
+.form-row .col:last-child {
+    margin-right: 0;
+}
+
+.invalid:focus {
+    border-color: #1E38A8;
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    input, select
+    {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+    .form-row {
+        flex-direction: column;   
+    }
+
+    .form-row .col {
+        min-width: 100%;
+    }
+}
+
+/* FAQ Styles */
+.faq .faq-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.faq .question {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.faq .question img {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.payment-option-icon
+{
+
+}
+
+.icon-pay
+{
+    width: auto;
+    height: 45px;
+    margin-right: 50px;
+}
+
+.faq .answer {
+    
+    display: none;
+    margin-left: 26px;
+}
+
+.faq .answer p {
+    
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.info-container ul li 
+{
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.faq .answer.active {
+    display: block;
+}
+
+.faq .question.active img {
+    transform: rotate(180deg);
+}
+
+/* Checkmark on Step 4 */
+.progress-bar .step.completed .step-number {
+    display: none;
+}
+
+.progress-bar .step.completed .step-img {
+    display: block;
+}
+
+/* New Section Styles */
+#finish-section {
+    display: none;
+}
+
+#finish-section.active {
+    display: block;
+}
+
+.button-group button {
+    margin: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .faq .question {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .faq .answer {
+        margin-left: 0;
+    }
+}

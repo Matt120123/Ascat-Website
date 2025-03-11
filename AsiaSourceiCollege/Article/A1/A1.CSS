@@ -1,0 +1,307 @@
+*{
+    margin-left: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+
+header h2{
+    position: absolute;
+    left: 160px;
+    margin-top: 21.9px;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+}
+
+header h3{
+    position: absolute;
+    left: 160px;
+    margin-top: 41px;
+    font-size: 0.8rem;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+}
+
+header{
+    position: relative;
+    background-color: #520f1c;
+}
+
+header img{
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 5px;
+}
+
+/*splash screen*/
+
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #520f1c;
+    transition: 1s;
+}
+
+.logo-header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.logo {
+    position: relative;
+    top: 60px;
+    bottom: -50px;
+    left: 130px;
+    opacity: 0;
+    font-size: 40px;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+#animate{
+    margin-left: 30%;
+    margin-top: 220px;
+    position: absolute;
+}
+
+#bg{
+    margin-left: 0%;
+}
+
+
+/*RIGHT SIDE*/
+
+.line hr{
+    color: #6d0504;
+    margin-top: 100px;
+}
+
+.container{
+    margin-left: 180px;
+    margin-top: 51px;    
+    display: inline-flex;
+    box-sizing: border-box;
+}
+
+.recommend{
+    margin-left: 34px;
+    border-left: solid 1px #d8cacd;
+    overflow: auto;
+    height: 1890px;
+}
+
+.contain {
+    display: grid;
+    align-items: center; 
+    column-gap: 5px;
+   }
+
+.contain h2{
+    margin-top: -30px;
+    margin-left: 55px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 23px;
+    font-weight: 200;
+    font-style: thin;
+    letter-spacing: 2.5px;
+}
+
+.contain img{
+    position: relative;
+    margin-top: 0px;
+    margin-left: 34px;
+    width: 5px;
+    height: 22px;
+}
+
+.recent {
+    display: grid;
+    align-items: center; 
+    column-gap: 5px;
+   }
+
+.recent h2{
+    margin-top: -30px;
+    margin-left: 55px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 23px;
+    font-weight: 200;
+    font-style: thin;
+    letter-spacing: 2.5px;
+}
+
+.recent img{
+    position: relative;
+    margin-top: 40px;
+    margin-left: 34px;
+    width: 5px;
+    height: 22px;
+}
+
+#Recog{
+    margin-top: -20px;
+    margin-left: 15px;
+    height: 350px;
+}
+
+#Retreat{
+    margin-top: -20px;
+    margin-left: 15px;
+    height: 350px;
+}
+
+.sharethis-inline-reaction-buttons{
+    margin-top: 20px;
+    margin-left: 34px;
+    size: 10px;
+}
+
+.sharethis-inline-share-buttons{
+    margin-left: 34px;
+}
+
+
+/*LEFT SIDE*/
+
+#winner{
+    height: 500px;
+}
+
+#first{
+    margin-top: 5px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 29px;
+}
+
+#second{
+    margin-top: -25px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 29px;
+}
+
+#line{
+    margin-top: -10px;
+    color: #d8cacd;
+}
+
+.article #date{
+    font-family: "Mukta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+#line2{
+    margin-top: 0px;
+    color: #d8cacd;
+}
+
+.text{
+    width: 750px;
+    font-family: "Mukta", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+#yey{
+    height: 455px;
+}
+
+#credit{
+    margin-left: 30px;
+    margin-right: 35px;
+    margin-top: -5px;
+    text-align: center;
+    font-size: 13px;
+    color: rgb(122, 130, 129);
+}
+
+
+
+/*footer*/
+
+footer{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+
+footer h2{
+    position: absolute;
+    left: 160px;
+    margin-top: 21.9px;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+}
+
+footer h3{
+    position: absolute;
+    left: 160px;
+    margin-top: 41px;
+    font-size: 0.8rem;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+}
+
+footer h4{
+    position: absolute;
+    left: 1130px;
+    margin-top: 41px;
+    font-size: 0.8rem;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+}
+
+footer img{
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 5px;
+}
+
+footer{
+    position: relative;
+    background-color: #520f1c;
+}

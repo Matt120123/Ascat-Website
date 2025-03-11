@@ -1,0 +1,6 @@
+node_modules
+# Ignore large files or directories
+/src/Videos/
+/src/imagesSource/
+/src/Events-Image/*.jpg
+/src/Asic-Image/*.png

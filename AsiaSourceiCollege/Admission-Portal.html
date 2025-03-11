@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Landing Page</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./src/Asic-Image/Asic-Logo.png" />
+    <link rel="stylesheet" href="/AsiaSourceiCollege/css/admission-portal.css">
+</head>
+<body>
+    <header class="Head">
+        <a href="/AsiaSourceiCollege/Home.html" class="logo-pos"><img class="asic-logo" src="/AsiaSourceiCollege/src/Asic-Image/Asic-Log.png" alt="Asia Source iCollege"></a> 
+        <nav>
+         <ul class="menu">
+             <li><a href="./Home.html" class="nav1">Home</a></li>
+            
+             <li class="navdown"> 
+                 <a href="/AsiaSourceiCollege/AboutUs.html#10th" class="nav1">About <!-- <img class="arrow-down" src="./src/Asic-Image/Caret.png" alt="carret-down"> --> </a>
+                   <!-- <div>
+                    <ul  class="dropdown_menu">
+                      <li><a href="#">Organizational Chart</a></li>
+                        <li><a href="/AsiaSourceiCollege/AboutUs.html#10th">About ASiC</a></li>
+                        <li><a href="#">Facilities</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+              -->
+             </li>
+             <!--
+            <li class="navdown1"><a href="./Programs-SeniorHighSchool.html" class="nav1">Programs<img class="arrow-down" src="./src/Asic-Image/Caret.png" alt="carret-down"></a>
+                <div>
+                    <ul  class="dropdown_menu_programs">
+                        <li><a href="./Programs-SeniorHighSchool.html">Senior High School</a></li>
+                        <li><a href="./Programs-SeniorHighSchool.html">Training & Assessment</a></li>
+                        <li><a href="./Programs-SeniorHighSchool.html">TESDA Scholarship</a></li>
+                    </ul>
+                </div>
+            </li>
+            -->
+             <li class="navdown2"><a href="./Admission.html" class="active">Admission</a>
+                 <!-- <div class="adm">
+                     <ul  class="dropdown_menu_admission ">
+                         <li><a href="./Admission.html">Senior High School</a></li>
+                         <!-- li><a href="./AssesmentApplication.html">Training & Assessment</a></li> 
+                         <!-- <li><a href="./Admission.html#req-sec">Admission Requirements</a></li>
+                             <li><a href="./Admission.html#freq-sec">FAQ's</a></li> 
+                     </ul>
+                 </div> -->
+             </li>
+             <li class="navdown4"><a href="#" class="nav1" onclick="redirectToSearch('Events')">EVENTS</a>
+                <div>
+                  <ul  class="dropdown_menu_updates">
+                      <!-- <li><button data-category="Announcement" onclick="redirectToCategory('Announcement')">Announcement</button></li> -->
+                      <!-- <li><button data-category="Events" onclick="redirectToCategory('Events')">Events</button></li> -->
+                     <!-- <li><button data-category="News" onclick="redirectToCategory('News')">News</button></li> -->
+                  </ul>
+              </div>
+              </li>   
+
+              <li class="navdown5"><a href="Requestform.html" class="nav1">Contact</a>
+                <!-- <div>
+                    <ul class="dropdown_menu_contact">
+                        <!-- <li><a href="Contact.html">COMPLAINT</a></li>
+                        <li><a href="Requestform.html">REQUEST</a></li>
+                    </ul>
+                </div> -->
+            </li>
+            
+         </ul>
+        </nav>
+        <nav>
+         <ul class="TOGGLE">
+             <li class="navdown3"> <a href="#" class="TOGGLE"><img class="TOGGLE" src="/asiasource/toggle.png" alt=""></a>
+             </li>
+         </ul>
+        </nav>
+     </header>
+
+
+    <div class="header1">
+        <h1 id="luk">ASIA SOURCE COLLEGE OF ARTS AND TECHNOLOGY</h1>
+        <p class="bold-white">Admission Form</p>
+        <p class="bold-white">S.Y. 2024</p>
+    </div>
+    <video class="hehe" autoplay muted loop>
+        <source src="../AsiaSourceiCollege/src/Videos/0701(1).mp4" type="video/mp4">
+      </video>
+    <!--overlay for the ok button-->
+    <div id="loadingOverlay" class="overlay">
+        <div id="loadingIndicator" class="loading">
+            <span id="corolblack">Loading...</span>
+        </div>
+    </div>
+    <!-- cusotm alert-->
+    <div id="customAlert" class="custom-alert">
+        <div class="alert-content">
+            <p id="alert-message">Successfully admitted, check your email to proceed with the next step! Please upload the printed receipt.</p>
+            <button id="okButton">OK</button>
+        </div>
+    </div>
+    
+    
+
+    <!-- Student Info Form -->
+    <div class="multi-step-form">
+    <section id="student-info" class="form-step active">
+        <div class="container">
+            <h3 id="luk1">STUDENT'S INFORMATION</h3>
+            <form id="admissionForm" action="/submit-form" method="post">
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <div class="row">
+                        
+                        <div class="col">
+                            <label for="lastName">Last Name*</label>
+                            <input type="text" id="LASTNAME" name="LASTNAME" required placeholder="Enter Last Name" required pattern="[A-Za-z ]+">
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col">
+                            <label for="firstName">First Name*</label>
+                            <input type="text" id="FIRSTNAME" name="FIRSTNAME" required placeholder="Enter First Name" required pattern="[A-Za-z ]+"> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="middleInitial">Middle Name*</label>
+                            <input type="text" id="MIDDLEINITIAL" name="MIDDLEINITIAL" required placeholder="Enter Middle Name" required pattern="[A-Za-z ]+">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="suffix">Suffix</label>
+                            <select id="SUFFIX" name="SUFFIX" class="medium-input">
+                                <option value="" disabled selected>Select Suffix</option>
+                                <option value="">N/A</option>
+                                <option value="Jr.">Jr.</option>
+                                <option value="Sr.">Sr.</option>
+                                <option value="III">III</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="sex">Sex*</label>
+                            <select id="SEX" name="SEX" required class="medium-input"> 
+                                <option value="" disabled selected>Select Sex</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="BIRTHDATE">Birthdate (DD/MM/YYYY)*</label>
+                            <input type="text" id="birthdate" name="BIRTHDATE" required placeholder="Select Birthdate" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <label for="age">Age*</label>
+                            <input type="number" id="AGE" name="AGE" required min="1" required max="100" required placeholder="Enter Age">
+                        </div>
+                        <div class="col">
+                            <label for="religion">Religion*</label>
+                            <input type="text" id="REGION" name="RELIGION"  required placeholder="Enter Religion">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="mobileNumber">Mobile Number*</label>
+                            <input type="tel" id="MOBILENUMBER" name="MOBILENUMBER" required pattern="[0-9]{10}" required placeholder="Enter Mobile Number">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="studentEmailAddress">Student's Email Address*</label>
+                            <input type="email" id="STUDENTEMAILADDRESS" name="STUDENTEMAILADDRESS" required placeholder="Enter Email" >
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="navigation-buttons">
+                    <button type="button" id="next-to-application" class="next-button">Next</button>
+                </div>
+            </div>
+            </section>
+
+
+  <!-- Application Form -->
+  <section id="application" class="form-step">
+    <div class="container">
+        <h3>APPLICATION</h3>
+        <fieldset>
+            <legend>Application Details</legend>
+
+            <div class="row">
+                <div class="col">
+                    <label for="branch">Select Branch:</label>
+                    <select id="BRANCH" name="BRANCH" required>
+                        <option value=""> Select Branch</option>
+                        <option value="taguig">Taguig</option>
+                        <option value="pasig">Pasig</option>
+                    </select>
+                </div>
+    
+
+            <div class="row">
+                <div class="col">
+                    <label for="gradeLevel">Grade Level*</label>
+                    <select id="GRADELEVEL" name="GRADELEVEL" required class="medium-input">
+                        <option value="" disabled selected>Select Grade Level</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="lrn">Student's LRN*</label>
+                    <input type="text" id="LRN" name="LRN" required placeholder="Enter LRN">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="juniorHighSchool">Name of Junior High School*</label>
+                    <input type="text" id="JUNIORHIGHSCHOOL" name="JUNIORHIGHSCHOOL" required placeholder="Enter Name of Junior High School">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="highSchoolAddress">Address*</label>
+                    <input type="text" id="HIGHSCHOOLADDRESS" name="HIGHSCHOOLADDRESS" required placeholder="Enter Adress of Junior High School">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="preferredTrack">Preferred Track*</label>
+                    <select id="PREFERREDTRACK" name="PREFERREDTRACK" required class="medium-input">
+                        <option value="" disabled selected>Select Preferred Track</option>
+                        <option value="Technical Vocational Livelihood Track">Technical Vocational Livelihood Track</option>
+                        <option value="Academic Track">Academic Track</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="preferredStrand">Preferred Strand*</label>
+                    <select id="PREFERREDSTRAND" name="PREFERREDSTRAND" required class="medium-input">
+                        <option value="" disabled selected>Select Preferred Strand</option>
+                        <option value="ABM">ABM (Accountancy, Business, and Management)</option>
+                        <option value="STEM">STEM (Science, Technology, Engineering, and Mathematics)</option>
+                        <option value="GAS">GAS (General Academic Strand)</option>
+                        <option value="HUMSS">HUMSS (Humanities and Social Sciences)</option>
+                        <option value="ICT-CSS">CSS (Computer Systems Servicing)</option>
+                        <option value="ICT-CP">CP (Computer Programming)</option>
+                        <option value="HE-HO">HE-HO (Hospitality Management)</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        <div class="navigation-buttons">
+            
+            <button type="button" id="back-to-student-info">Back</button>
+            <button type="button" id="next-to-address">Next</button>
+        </div>
+    </div>
+</section>
+  
+<!-- complete -->
+<section id="address" class="form-step">
+    <div class="container">
+        <h3>COMPLETE ADDRESS</h3>
+        <fieldset>
+            <legend>Address Details</legend>
+            <div class="row">
+                <div class="col">
+                    <label for="region">Region*</label>
+                    <select id="REGION" name="REGION" required class="medium-input">
+                        <option value="">Select Region</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="province">Province*</label>
+                    <select id="PROVINCE" name="PROVINCE" disabled required class="medium-input">
+                        <option value="">Select Province</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="municipality">Municipality/City*</label>
+                    <select id="CITY" name="CITY" disabled required class="medium-input">
+                        <option value="">Select City</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="barangay">Barangay*</label>
+                    <input type="text" id="BARANGAY" name="BARANGAY" required placeholder="Enter Barangay">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="houseNo">House No./Street/Purok*</label>
+                    <input type="text" id="HOUSENO" name="HOUSENO" required placeholder="Enter House No./Street/Purok">
+                </div>
+            </div>
+        </fieldset>
+        <div class="navigation-buttons">
+            <button type="button" id="back-to-application">Back</button>
+            <button type="button" id="next-to-guardian">Next</button>
+        </div>
+    </div>
+</section>
+
+  
+<!-- Guardian/parent Info Form -->
+<section id="guardian-info" class="form-step">
+    <div class="container">
+        <h3>PARENT INFORMATION</h3>
+            <fieldset>
+                <legend>Father's Information</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="fatherLastName">Father's Full Name*</label>
+                        <input type="text" id="FATHERLASTNAME" name="FATHERLASTNAME" required placeholder="Enter Father's Full Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="fatherSuffix">Father's Suffix</label>
+                        <select id="FATHERSUFFIX" name="FATHERSUFFIX" class="medium-input">
+                            <option value="" disabled selected>Select Suffix</option>
+                            <option value="">N/A</option>
+                            <option value="Jr.">Jr.</option>
+                            <option value="Sr.">Sr.</option>
+                            <option value="III">III</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="fatherMobileNumber">Father's Mobile Number*</label>
+                        <input type="tel" id="FATHERMOBILENUMBER" name="FATHERMOBILENUMBER" required pattern="[0-9]{10}" required placeholder="Enter Father's Mobile Number">
+                    </div>
+                    
+                    <div class="col">
+                        <label for="fatherEmail">Father's Email*</label>
+                        <input type="email" id="FATHEREMAIL" name="FATHEREMAIL" required placeholder="Enter Father's Email">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Mother's Information</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="motherLastName">Mother's Full Name*</label>
+                        <input type="text" id="MOTHERLASTNAME" name="MOTHERLASTNAME" required placeholder="Enter Mother's Full Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="motherMobileNumber">Mother's Mobile Number*</label>
+                        <input type="tel" id="MOTHERMOBILENUMBER" name="MOTHERMOBILENUMBER" required pattern="[0-9]{10}"required placeholder="Enter Mother's Mobile Number">
+                    </div>
+                    <div class="col">
+                        <label for="motherEmail">Mother's Email*</label>
+                        <input type="email" id="MOTHEREMAIL" name="MOTHEREMAIL" required placeholder="Enter Mother's Email">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Guardian's Information</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="guardianLastName">Guardian's Full Name*</label>
+                        <input type="text" id="GUARDIANLASTNAME" name="GUARDIANLASTNAME" required placeholder="Enter Guardian's Full Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="guardianSuffix">Guardian's Suffix</label>
+                        <select id="GUARDIANSUFFIX" name="GUARDIANSUFFIX" class="medium-input">
+                            <option value="" disabled selected>Select Suffix</option>
+                            <option value="">N/A</option>
+                            <option value="Jr.">Jr.</option>
+                            <option value="Sr.">Sr.</option>
+                            <option value="III">III</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="guardianMobileNumber">Guardian's Mobile Number*</label>
+                        <input type="tel" id="GUARDIANMOBILENUMBER" name="GUARDIANMOBILENUMBER" required pattern="[0-9]{10}">
+                    </div>
+                    <div class="col">
+                        <label for="guardianEmail">Guardian's Email*</label>
+                        <input type="email" id="GUARDIANEMAIL" name="GUARDIANEMAIL" required placeholder="Enter Guardians's Email">
+                    </div>
+
+            </fieldset>
+            <div class="privacy-section">
+                <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                <label for="privacyPolicy">
+                    I hereby allow ASIA SOURCE iCOLLEGE, INC. to collect some personal information (name, contact number, etc.) and other pertinent information I provided which may be used for processing of my Senior High School application. <br>
+                    Such collection and processing of information is aligned with the Data Privacy Policy of ASIA SOURCE ICOLLEGE, INC.</a></label>
+            </div>
+
+            <div class="navigation-buttons">
+                <button type="button" id="back-to-address">Back</button>
+                <button type="submit" id="submit-form">Submit</button>
+            </div>
+           
+        </div>
+        </section>
+    </form>
+    </div>
+
+            
+    <footer class="footer">
+        <div class="footer-content">
+      
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <a href="./AboutUs.html"><summary>About ASiC</summary></a>
+                <a href="./Programs-SeniorHighSchool.html"><summary>Programs</summary></a>
+                <a href="./Admission.html"><summary>Admission</summary></a>
+                  <a href="./Contact.html"><summary>Contact Us</summary></a>
+              
+            </div>
+            <div class="footer-section addresses">
+                
+                <h3>Taguig Campus</h3>
+                <p><img class="location-img" src="./images/Location.png" alt="carret-down">4th Floor Gate 3 Plaza, Lawton Avenue corner Juliano St.,
+      
+                  AFPOVAI Phase III, Western Bicutan, Taguig City 1630 </p> <br>
+                  <p><img class="location-img" src="./images/contacts.png" alt="carret-down">8553-5202 | 0939-1167353</p>
+                 <br>
+                <h3>Pasig Campus</h3>
+                <p><img class="location-img" src="./images/Location.png" alt="carret-down">3/F One Victoria Plaza, A. Mabini St. Kapasigan, Pasig City</p> <br>
+                  <p><img class="location-img" src="./images/contacts.png" alt="carret-down">8637-9895 | 0961-7430541 | 0977-7855289</p>
+                 <br>
+                  <h3>Business Hours</h3>
+                  <p><img class="location-img" src="./src/Asic-Image/Time.png" alt="carret-down">7:00 AM - 5:00 PM</p>
+                  <br>
+            </div>
+            <div class="footer-section-social-links">
+                <h3>#ASiC On</h3>
+                <a href="https://www.facebook.com/asiasourceph"><img src="./src/Social-Image/Facebook-logo.png" alt="Facebook"></a>
+                <a href="https://www.messenger.com/t/494884660692040/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0"><img src="./src/Social-Image/Messenger.png" alt="Messenger"></a>
+                <a href="#"><img src="./src/Social-Image/Twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/asiasourceph_official/"><img src="./src/Social-Image/Instagram.png" alt="Instagram"></a>
+                <a href="https://www.instagram.com/asiasourceph_official/"><img src="./src/Social-Image/tiktok.png" alt="Tiktok"></a>
+                <a href="https://www.youtube.com/@asiasourceicollege5754"><img src="./src/Social-Image/Youtube-logo.png" alt="Youtube"></a>
+            </div>
+           <div class="footer-section vision-mission">
+                      <h3>Vision, Mission, Core Values</h3>
+                      <details>
+                          <summary><img class="arrow-down" src="/AsiaSourceiCollege/images/caret1.png" alt="carret-down">Vision</summary>
+                          <p>Asia Source envisions to be the premier institution
+                             that produces morally upright leaders with technological
+                              and entreprenuerial expertise and is actively responsive
+                               to the challenges and the needs of the global market.
+                                It values the presence of its workforce, thus,
+                                 it provides equal opportunities for total growth
+                                  and development through dynamic and strategic leadership,
+                                   enhancing the skills and abilities to become world
+                                    class business partners.</p>
+                      </details>
+                      <details>
+                          <summary><img class="arrow-down" src="/AsiaSourceiCollege/images/caret1.png" alt="carret-down">Mission</summary>
+                          <p>Asia Source iCollege has an ardent commitment for excellence.
+                             It provides a high quality education with an innovative way of 
+                             thinking through its work of the art and dynamic facilties. This
+                              educational institution is the avenue where character is indoctrinated
+                               to its stakeholders to become value-oriented leaders with
+                                emphasis on integrity, discipline, compassion, and respect. Thus,
+                                 emanate leaders who are well-rounded with a sense of global success
+                                  through innovation, collaboration, and a spirit of passion and determination
+                                   in every endeavor they traverse.</p>
+                      </details>
+                      <details>
+                          <summary><img class="arrow-down" src="/AsiaSourceiCollege/images/caret1.png" alt="carret-down">Core Values</summary>
+                           
+                            <p>
+                              <br>
+                              <strong>SELF-DISCIPLINE (Disiplina sa sarili) </strong><br>
+                              <br>
+                              It is the manifestation to forego instant fulfilment in goodwill of something better, but rather is the aptitude of the person to fuse to actions, thoughts and behaviour, which lead to success, in spite of challenges and adversities of life. <br>
+                            <br>
+                            <strong>INTEGRITY (Pagkamatuwid)</strong><br>
+                            <br>
+                              It is the moral compass of doing the right actions that would do nothing to dishonour your true self. <br>
+                            <br>
+                            <strong>RESPECT (Paggalang)</strong><br>
+                            <br>
+                            It is the high esteem and care of showing value to another being and nature. It is the unspoken communication
+                             which builds strong relations towards people, world and nature.
+      
+                            <br>
+                            <br>
+                            <strong>COMPASSION (Malasakit)</strong><br>
+                            <br>
+                            It is to recognize the suffering of others and take action to help and touching the heart of a man regardless of the stature of one’s life. <br>
+                            <br>
+                            <strong>SERVICE (Paglilingkod)</strong><br>
+                            <br>
+                            It is the diligence and selflessly giving time and effort in fulfilling the needs of another individual and see it through to completion. <br>
+                            <br>
+                            <strong>EXCELLENCE (Kahusayan)</strong><br>
+                            <br>
+                            We surpass mediocrity and believes in the fundamental purpose of quality education through innovation and continuous development of curricula,
+                             instruction material, facilities and equipment and the major key source of information of the students- the professional character and expertise
+                              of the institution’s officials, instructors and staff to produce distinct and exceptional graduates. <br>
+                            <br>
+                            
+                            </p>
+                          
+                      </details>
+                  </div>
+              </div>
+       
+      </footer>
+      <footer  class="footer-w">
+        <div class="footer-bottom">
+          <div class="footer-section-partners">
+            <h3>Social Links</h3>
+            <a href="#"><img src="./src/Asic-Image/ASIC-logo.png" alt="ASIASOURCEiCOLLEGE"></a>
+            <img src="./src/Asic-Image/Deped.png" alt="Deped">
+            <img src="./src/Asic-Image/Tesda.png" alt="TESDA">
+            <img src="./src/Asic-Image/peac1.png" alt="peac1">
+            <img src="./src/Asic-Image/EdukasyonPH-logo.png" alt="EdukasyonPH-logo">
+        </div>
+          <p class="developed-by">Developed by BEERPS</p>
+            <p class="copyright">Asia Source iCollege. &copy; 2024 All rights reserved.</p>
+      
+          <p class="privacy-policy"><a href="#">Privacy Policy</a></p>
+        
+      </div>
+      </footer>
+
+<!-- for pdf-->
+
+  <script src="JS/srcadmision.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+</body>
+</html>

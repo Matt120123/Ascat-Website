@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training & Assessment Application</title>
+    <link rel="stylesheet" href="./css/Assessment.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <img src="./src/Asic-Image/Tesda.png" alt="Logo" class="logo">
+        <h1>TESDA APPLICATION</h1>
+        <div class="progress-bar">
+            <div class="step"><img src="./src/imagesSource/check-step.png" class="step-img" alt="check"><span class="step-number">1</span></div>
+            <div class="progress-line"></div>
+            <div class="step"><img src="./src/imagesSource/check-step.png" class="step-img" alt="check"><span class="step-number">2</span></div>
+            <div class="progress-line"></div>
+            <div class="step"><img src="./src/imagesSource/check-step.png" class="step-img" alt="check"><span class="step-number">3</span></div>
+            <div class="progress-line"></div>
+            <div class="step"><img src="./src/imagesSource/check-step.png" class="step-img" alt="check"><span class="step-number">4</span></div>
+        </div>
+        
+        <form id="application-form">
+            <!-- Program Type Section -->
+            <div class="form-section active" id="program-type-section">
+                <h2>Basic Information</h2>
+                <label for="program">Service Type <span class="required">*</span></label>
+                <select id="program" required>
+                    <option value="">Select a service</option>
+                    <option value="short-course">Short Course</option>
+                    <option value="Training">TRAINING</option>
+                    <option value="tesda-scholarship">TESDA Scholarship Program</option>
+                </select>
+                <div id="scholarship-package" style="display: none;">
+                    <div class="info-container">
+                    <p><strong><span style="color: red;">* </span>What type of Scholarship Package?</strong></p>
+                    <div class="radio-group">   
+                      <div class="radio-inp-sec">
+                        <input type="radio" name="scholarship" value="TWSP" >
+                        <label>TWSP</label>
+                      </div>
+                        <div class="radio-inp-sec">
+                            <input type="radio" name="scholarship" value="PESFA" >
+                            <label>PESFA</label>
+                            </div>
+                        <div class="radio-inp-sec">
+                            <input type="radio" name="scholarship" value="STEP" >
+                            <label>STEP</label>
+                        </div>
+                    </div>  
+                    </div>
+                </div>
+                <label for="branch">Preffered Branch <span class="required">*</span></label>
+                <select id="branch" required>
+                    <option value="">Select a branch</option>
+                    <option value="pasig">Pasig</option>
+                    <option value="taguig">Taguig</option>
+                </select>
+                <label for="course">Qualification <span class="required">*</span></label>
+                <select id="course" required>
+                    <option value="">Select a course</option>
+                    <option value="css-ncii">Computer Systems Servicing NCII</option>
+                    <option value="cookery-ncii">Cookery NCII</option>
+                    <option value="fbs-ncii">Food and Beverage Services NCII</option>
+                    <option value="bpp-ncii">Bread and Pastry Production NCII</option>
+                    <option value="housekeeping-nciii">Housekeeping NCIII</option>
+                    <option value="ems-nciii">Event Management Services NCIII</option>
+                    <option value="bookkeeping-ncii">Bookkeeping NCII</option>
+                    <option value="housekeeping-nciii">Housekeeping NCIII</option>
+                </select>
+                <div class="button-group">
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+            </div>
+    
+            <!-- Applicant Information Section -->
+            <div class="form-section" id="applicant-info-section">
+                
+                <h2>Applicant Information</h2>
+                <div class="summary-review">
+                <p><strong><span id="review-program-1"></span></strong>: </p>
+                <p> <span id="review-course-1"></span> - </p>
+                <p> <span id="review-branch-1"></span></p>
+                </div>
+                <div class="info-container">
+                    <h3><img src="./src/imagesSource/Form.png" alt="icon" class="icon">Personal Information</h3>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="last-name">Last Name <span class="required">*</span></label>
+                            <input type="text" id="last-name" required>
+                        </div>
+                        <div class="col">
+                            <label for="first-name">First Name <span class="required">*</span></label>
+                            <input type="text" id="first-name" required>
+                            <label class="guide"><span class="required">* </span>' ñ ' Character: (hold)Alt + 164 (lowercase) or ' Ñ ' (hold)Alt + 165 (uppercase).</span></label>
+                        </div>
+                        <div class="col">
+                            <label for="middle-name">Middle Name</label>
+                            <input type="text" id="middle-name">
+                        </div>
+                        <div class="col">
+                            <label for="suffix-name">Suffix Name</label>
+                            <input type="text" id="suffix-name">
+                            <label class="guide"><span class="required">* </span>If a question is not applicable, please type "NA" (not applicable) instead of leaving the field blank.</span></label>
+
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div  class="col">
+                        <label for="gender">Gender <span class="required">*</span></label>
+                        <select id="gender" required>
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div  class="col">
+                        <label for="civil-status">Civil Status <span class="required">*</span></label>
+                        <select id="civil-status" required>
+                            <option value="">Select civil status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="widowed">Widowed</option>
+                            <option value="divorced">Divorced</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="nationality">Nationality <span class="required">*</span></label>
+                        <input type="text" id="nationality" required>
+                    </div>
+                    <div  class="col">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <input type="date" id="dob" required>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="birthplace">Birthplace</label>
+                        <input  class="input-2"  type="text" id="birthplace">
+                    </div>
+                    <div class="col">
+                        <label for="religion">Religion</label>
+                        <input class="input-2" type="text" id="religion">
+                    </div>
+                    </div>
+                   
+                    <div class="form-row">
+                    <div class="col">
+                        <label for="employment-status">Employment Status <span class="required">*</span></label>
+                        <select class="input-2" id="employment-status" required>
+                            <option value="">Select employment status</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="employed">Employed</option>
+                            <option value="self-employed">Self-Employed</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="Salary">Income per Month<span class="required">*</span></label>
+                        <select class="input-2" id="Salary" required>
+                            <option value="">Select salary</option>
+                            <option value="0 - 9,999">0 - 9,999</option>
+                            <option value="10,000 - 19,999">10,000 - 19,999</option>
+                            <option value="20,000 - 29,999">20,000 - 29,999</option>
+                            <option value="30,000 - 39,999">30,000 - 39,999</option>
+                            <option value="40,000 - 49,999">40,000 - 49,999</option>
+                            <option value="50,000 - up">50,000 - up</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="education-before">Educational Attainment before Training <span class="required">*</span></label>
+                        <select class="input-2" id="education-before" required>
+                            <option value="">Select educational attainment</option>
+                            <option value="high-school">High School</option>
+                            <option value="college">College</option>
+                            <option value="vocational">Vocational</option>
+                        </select>
+                    </div>
+                    
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h3><img src="./src/imagesSource/Form.png" alt="icon" class="icon">Contact Details</h3>
+                    <div class="form-row">
+                        <div class="col">
+                        <label for="mobile">Mobile Number <span class="required">*</span></label>
+                        <input type="tel" id="mobile" placeholder="09123456789" required>
+                        <label class="guide"><span class="required">* </span>09XXXXXXXXX (e.g. 09171234567)</span></label>
+                        </div>
+                        <div class="col">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" placeholder="johndoe@example.com" required>
+                        <label class="guide"><span class="required">* </span>localpart@domain.tld (e.g. johndoe@example.com)</span></label>
+                        </div>
+                        <div class="col">
+                        <label for="facebook">Facebook Account</label>
+                        <input type="text" id="facebook">
+                        </div>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h3><img src="./src/imagesSource/Form.png" alt="icon" class="icon">Current Address</h3>
+                    <div class="form-row">
+                        <div class="col">
+                        <label>Unit Number <span class="required">*</span></label>
+                        <input type="text" id="current-unit" placeholder="Unit #" required>
+                        </div>
+                        <div class="col">
+                        <label>Street <span class="required">*</span></label>
+                        <input type="text" id="current-street" placeholder="Street" required>
+                        </div>
+                        <div class="col">
+                        <label>Barangay <span class="required">*</span></label>
+                        <input type="text" id="current-barangay" placeholder="Barangay" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                        <label>City <span class="required">*</span></label>
+                        <input type="text" id="current-city" placeholder="City" required>
+                        </div>
+                        <div class="col">
+                        <label>Province</label>
+                        <input type="text" id="current-province" placeholder="Province">
+                        </div>
+                        <div class="col">
+                        <label>Zip Code</label>
+                        <input type="number" id="current-zip" placeholder="xxxx" pattern="\d{4}" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                        </div>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h3><img src="./src/imagesSource/Form.png" alt="icon" class="icon">Permanent Address</h3>
+                    <div class="same-address">
+                        <input type="checkbox" id="same-address">
+                        <label><strong>Same as current address</strong></label>
+                      </div>
+                    <div class="form-row">
+                        <div class="col">
+                        <label>Unit Number <span class="required">*</span></label>
+                        <input type="text" id="permanent-unit" placeholder="Unit #" required>
+                        </div>
+                        <div class="col">
+                        <label>Street <span class="required">*</span></label>
+                        <input type="text" id="permanent-street" placeholder="Street" required>
+                        </div>
+                        <div class="col">
+                        <label>Barangay <span class="required">*</span></label>
+                        <input type="text" id="permanent-barangay" placeholder="Barangay" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                        <label>City <span class="required">*</span></label>
+                        <input type="text" id="permanent-city" placeholder="City" required>
+                        </div>
+                        <div class="col">
+                        <label>Province</label>
+                        <input type="text" id="permanent-province" placeholder="Province">
+                        </div>
+                        <div class="col">
+                        <label>Zip Code</label>
+                        <input type="number" id="permanent-zip" placeholder="xxxx" pattern="\d{4}" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    </div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+            </div>
+    
+            <!-- Family Background Section -->
+           
+            <div class="form-section" id="family-background-section">
+                <h2>Family Information</h2>
+                <div class="summary-review">
+                    <p><strong><span id="review-program-2"></span></strong>: </p>
+                    <p> <span id="review-course-2"></span> - </p>
+                    <p> <span id="review-branch-2"></span></p>
+                    </div>
+                <div class="info-container">
+                    <h3><img src="./src/imagesSource/Form.png" alt="icon" class="icon">Parents or Guardian or Spouse Information</h3>
+                    <div class="form-row">
+                        <div class="col">
+                        <label for="fam-last-name">Last Name <span class="required">*</span></label>
+                        <input type="text" id="fam-last-name" required>
+                        </div>
+                        <div class="col">
+                        <label for="fam-first-name">First Name <span class="required">*</span></label>
+                        <input type="text" id="fam-first-name" required>
+                        <label class="guide"><span class="required">* </span>' ñ ' Character: (hold)Alt + 164 (lowercase) or ' Ñ ' (hold)Alt + 165 (uppercase).</span></label>
+                       </div>
+                        <div class="col">
+                        <label for="fam-middle-name">Middle Name</label>
+                        <input type="text" id="fam-middle-name">
+                        </div>
+                        <div class="col">
+                        <label for="fam-suffix-name">Suffix Name</label>
+                        <input type="text" id="fam-suffix-name">
+                        <label class="guide"><span class="required">* </span>If a question is not applicable, please type "NA" (not applicable) instead of leaving the field blank.</span></label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                        <label for="fam-gender">Gender <span class="required">*</span></label>
+                        <select id="fam-gender" required>
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        </div>
+                        <div class="col">
+                        <label for="fam-civil-status">Civil Status <span class="required">*</span></label>
+                        <select id="fam-civil-status" required>
+                            <option value="">Select civil status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="widowed">Widowed</option>
+                            <option value="divorced">Divorced</option>
+                        </select>
+                        </div>
+                        <div class="col">
+                        <label for="fam-nationality">Nationality <span class="required">*</span></label>
+                        <input type="text" id="fam-nationality" required>
+                        </div>
+                    <div class="col">
+                        <label for="fam-dob">Date of Birth <span class="required">*</span></label>
+                        <input type="date" id="fam-dob" required>
+                    </div>
+                </div>
+                    <div class="form-row">
+                        <div class="col">
+                        <label for="fam-birthplace">Birthplace</label>
+                        <input type="text" id="fam-birthplace">
+                        </div>
+                        <div class="col">
+                        <label for="fam-religion">Religion</label>
+                        <input type="text" id="fam-religion">
+                        </div>
+                        <div class="col">
+                        <label for="fam-occupation">Occupation</label>
+                        <input type="text" id="fam-occupation">
+                        <label class="guide"><span class="required">* </span>If a question is not applicable, please type "NA" (not applicable) instead of leaving the field blank.</span></label>
+                        </div>
+                        <div class="col">
+                        <label for="fam-relationship">Relationship <span class="required">*</span></label>
+                        <input type="text" id="fam-relationship" required>
+                        <label class="guide"><span class="required">* </span>Use the most specific term possible (e.g. "father" instead of "parent").</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h3><img src="./src/imagesSource/Form.png" alt="icon" class="icon">Contact Details</h3>
+                    <div class="form-row">
+                        <div class="col">
+                        <label for="fam-mobile">Mobile Number <span class="required">*</span></label>
+                        <input type="tel" id="fam-mobile" required >
+                        <label class="guide"><span class="required">* </span>09XXXXXXXXX (e.g. 09171234567)</span></label>
+                        </div>
+                        <div class="col">
+                        <label for="fam-email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="fam-email" required>
+                        <label class="guide"><span class="required">* </span>localpart@domain.tld (e.g. johndoe@example.com)</span></label>
+                        </div>
+                        <div class="col">
+                        <label for="fam-facebook">Facebook Account</label>
+                        <input type="text" id="fam-facebook">
+                        </div>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h3><img src="./src/imagesSource/Form.png" alt="icon" class="icon">Current Address</h3>
+                    <div class="form-row">
+                        <div class="col">
+                        <label>Unit Number <span class="required">*</span></label>
+                        <input type="text" id="fam-current-unit" placeholder="Unit #" required>
+                        </div>
+                        <div class="col">
+                        <label>Street <span class="required">*</span></label>
+                        <input type="text" id="fam-current-street" placeholder="Street" required>
+                        </div>
+                        <div class="col">
+                        <label>Barangay <span class="required">*</span></label>
+                        <input type="text" id="fam-current-barangay" placeholder="Barangay" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                        <label>City <span class="required">*</span></label>
+                        <input type="text" id="fam-current-city" placeholder="City" required>
+                        </div>
+                        <div class="col">
+                        <label>Province</label>
+                        <input type="text" id="fam-current-province" placeholder="Province">
+                        </div>
+                        <div class="col">
+                        <label>Zip Code</label>
+                        <input type="number" id="fam-current-zip" placeholder="xxxx" pattern="\d{4}" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                        </div>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h3><img src="./src/imagesSource/Form.png" alt="icon" class="icon">Permanent Address</h3>
+                    <div class="same-address">
+                        <input type="checkbox" id="fam-same-address">
+                        <label><strong>Same as current address</strong></label>
+                      </div>
+                    <div class="form-row">
+                        <div class="col">
+                        <label>Unit Number <span class="required">*</span></label>
+                        <input type="text" id="fam-permanent-unit" placeholder="Unit #" required>
+                        </div>
+                        <div class="col">
+                        <label>Street <span class="required">*</span></label>
+                        <input type="text" id="fam-permanent-street" placeholder="Street" required>
+                        </div>
+                        <div class="col">
+                        <label>Barangay <span class="required">*</span></label>
+                        <input type="text" id="fam-permanent-barangay" placeholder="Barangay" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                        <label>City <span class="required">*</span></label>
+                        <input type="text" id="fam-permanent-city" placeholder="City" required>
+                        </div>
+                        <div class="col">
+                        <label>Province</label>
+                        <input type="text" id="fam-permanent-province" placeholder="Province">
+                        </div>
+                        <div class="col">
+                        <label>Zip Code</label>
+                        <input type="number" id="fam-permanent-zip" placeholder="xxxx" pattern="\d{4}" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    </div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+            </div>
+    
+            <!-- Review & Submit Section -->
+            <div class="form-section" id="review-submit-section">
+                <h2>Review & Submit</h2>
+                
+                <label class="guide-1"><span class="required">* </span>Please review your <span style="font-weight: 900; color: #1E38A8;">enrollment form</span> carefully to ensure that all information is accurate and complete. Double-check <span style="font-weight: 900; color: #1E38A8;">personal details</span> , <span style="font-weight: 900; color: #1E38A8;">contact details</span>,
+                and <span style="font-weight: 900; color: #1E38A8;">address</span> to avoid any errors or delays in processing your application.</span></label><br>
+    
+                <div class="info-container-rev">
+                    <h3><img src="./src/imagesSource/review-icon.png" alt="icon" class="icon"><strong>Basic Information</strong></h3>
+                    <p><strong>Program:</strong> <span id="review-program"></span></p>
+                    <p><strong>Preferred Branch:</strong> <span id="review-branch"></span></p>
+                    <p><strong>Course:</strong> <span id="review-course"></span></p>
+                    <p><strong>Scholarship Package:</strong> <span id="review-scholarship"></span></p><br>
+                    <h3><img src="./src/imagesSource/review-icon.png" alt="icon" class="icon"><strong>Personal Information</strong></h3>
+                    <p><strong>Full Name:</strong> <span id="review-full-name"></span></p>
+                    <p><strong>Gender:</strong> <span id="review-gender"></span></p>
+                    <p><strong>Civil Status:</strong> <span id="review-civil-status"></span></p>
+                    <p><strong>Nationality:</strong> <span id="review-nationality"></span></p>
+                    <p><strong>Date of Birth:</strong> <span id="review-dob"></span></p>
+                    <p><strong>Birthplace:</strong> <span id="review-birthplace"></span></p>
+                    <p><strong>Religion:</strong> <span id="review-religion"></span></p>
+                    <p><strong>Employment Status:</strong> <span id="review-employment-status"></span></p>
+                    <p><strong>Educational Attainment:</strong> <span id="review-education-before"></span></p>
+                </div>
+            
+                <div class="info-container-rev">
+                    <h3><img src="./src/imagesSource/review-icon.png" alt="icon" class="icon"><strong>Contact Details</strong></h3>
+                    <p><strong>Mobile Number:</strong> <span id="review-mobile"></span></p>
+                    <p><strong>Email Address:</strong> <span id="review-email"></span></p>
+                    <p><strong>Facebook Account:</strong> <span id="review-facebook"></span></p>
+                </div>
+            
+                <div class="info-container-rev">
+                    <h3><img src="./src/imagesSource/review-icon.png" alt="icon" class="icon"><strong>Address</strong></h3>
+                    <p><strong>Current Address:</strong> <span id="review-current-address"></span></p>
+                    <p><strong>Permanent Address:</strong> <span id="review-permanent-address"></span></p>
+                </div>
+            
+                <div class="info-container-rev">
+                    <h3><img src="./src/imagesSource/review-icon.png" alt="icon" class="icon"><strong>Family Information</strong></h3>
+                    <p><strong>Full Name:</strong> <span id="review-fam-full-name"></span></p>
+                    <p><strong>Gender:</strong> <span id="review-fam-gender"></span></p>
+                    <p><strong>Civil Status:</strong> <span id="review-fam-civil-status"></span></p>
+                    <p><strong>Nationality:</strong> <span id="review-fam-nationality"></span></p>
+                    <p><strong>Date of Birth:</strong> <span id="review-fam-dob"></span></p>
+                    <p><strong>Birthplace:</strong> <span id="review-fam-birthplace"></span></p>
+                    <p><strong>Religion:</strong> <span id="review-fam-religion"></span></p>
+                    <p><strong>Occupation:</strong> <span id="review-fam-occupation"></span></p>
+                    <p><strong>Relationship:</strong> <span id="review-fam-relationship"></span></p><br>
+                    <h3><img src="./src/imagesSource/review-icon.png" alt="icon" class="icon"><strong>Contact Details</strong></h3>
+                    <p><strong>Mobile Number:</strong> <span id="review-fam-mobile"></span></p>
+                    <p><strong>Email Address:</strong> <span id="review-fam-email"></span></p>
+                    <p><strong>Facebook Account:</strong> <span id="review-fam-facebook"></span></p><br>
+                    <h3><img src="./src/imagesSource/review-icon.png" alt="icon" class="icon"><strong>Address</strong></h3>
+                    <p><strong>Current Address:</strong> <span id="review-fam-current-address"></span></p>
+                    <p><strong>Permanent Address:</strong> <span id="review-fam-permanent-address"></span></p>
+                </div>
+                 
+                <label class="guide-1"><span class="required">* </span>
+                    I hereby authorize <span style="font-weight: 800; color: #1E38A8;">ASIA SOURCE iCOLLEGE, INC</span>. to collect, 
+                    store, and process my personal information, including but not 
+                    limited to my name, contact number, and other details provided, 
+                    for the purpose of processing my <span style="font-weight: 800; color: #1E38A8;">application for a scholarship, short course, or assessment</span>. I acknowledge that such collection 
+                    and processing of information is in accordance with the <span style="font-weight: 800; color: #1E38A8;">Data Privacy Act of 2012</span> and ASIA SOURCE iCOLLEGE, INC.'s Data Privacy Policy, 
+                    and I have been informed of my rights as a data subject under the 
+                    said policy.
+                </label>
+                
+                <div class="same-address">
+                    <input type="checkbox" id="privacy-disclaimer" required>
+                    <label><strong>Privacy disclaimer <span class="required">*</span></strong></label>
+                 </div>
+
+                 <div class="button-group">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="submit" id="submit-btn">Submit</button>
+                   
+                </div>
+            </div>
+             <!-- Finish Section -->
+            <div class="form-section" id="finish-section">
+                <h2>Finish</h2>
+                <h2><img src="./src/imagesSource/REQUIREMENTS.png" alt="icon" class="icon">PDF COPY</h2>
+                <div class="button-group">
+                    <button type="button" id="print-btn">Print</button>
+                    <button type="button" id="download-btn">Download</button>
+                </div><br>
+
+                <div class="info-container">
+                    <h3><img src="./src/imagesSource/REQUIREMENTS.png" alt="icon" class="icon">Requirements</h3>
+                    <ul>
+                        <li>LONG BROWN ENVELOPE</li>
+                        <li>BARANGAY CLEARANCE</li>
+                        <li>NSO/PSA BIRTH CERTIFICATE (Photocopy)</li>
+                        <li>HS CARD/ HS DIPLOMA/ COLLEGE DIPLOMA/ TOR</li>
+                        <li>1 VALID ID</li>
+                        <li>PHOTOCOPY OF VALID ID W/ 3 SPECIMEN SIGNATURES</li>
+                        <li>4PCS. 1X1 ID PICTURE</li>
+                        <li>4PCS. PASSPORT SIZE ID PICTURE W/ WHITE BACKGROUND AND NAME TAG</li>
+                     
+                    </ul>
+                </div>
+
+                <!-- FAQ Section within Finish Section -->
+        <div class="info-container">
+            <h3><img src="./src/imagesSource/FAQICON.png" alt="icon" class="icon">FAQs</h3>
+            <div class="faq">
+            <div class="faq-item">
+                <div class="question">
+                <img src="/AsiaSourceiCollege/src/imagesSource/FAQ-DOWN.png" alt="Expand/Collapse">
+                <span style="font-weight: 600; color: #333;">TESDA Training & Assessment Programs</span>
+                </div>
+        <div class="answer">
+          <p><strong>COMPUTER SYSTEMS SERVICING NCII</strong> 35 days <img src="./src/imagesSource/calendar.png" alt="icon" class="icon"></p>
+          <p><strong>COOKERY NCII</strong> 40 days <img src="./src/imagesSource/calendar.png" alt="icon" class="icon"></p>
+          <p><strong>FOOD & BEVERAGE SERVICES NCII</strong> 45 days <img src="./src/imagesSource/calendar.png" alt="icon" class="icon"></p>
+          <p><strong>BREAD AND PASTRY PRODUCTION NCII</strong> 18 days <img src="./src/imagesSource/calendar.png" alt="icon" class="icon"></p>
+          <p><strong>EVENTS MANAGEMENT SERVICES NCIII</strong> 14 days <img src="./src/imagesSource/calendar.png" alt="icon" class="icon"></p>
+          <p><strong>BOOKKEEPING NCIII</strong> 37 days <img src="./src/imagesSource/calendar.png" alt="icon" class="icon"></p>
+          <p><strong>HOUSEKEEPING NCII</strong> 55 days <img src="./src/imagesSource/calendar.png" alt="icon" class="icon"></p>
+          <p><strong>HOUSEKEEPING NCIII</strong> 10 days <img src="./src/imagesSource/calendar.png" alt="icon" class="icon"></p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="question">
+          <img src="/AsiaSourceiCollege/src/imagesSource/FAQ-DOWN.png" alt="Expand/Collapse">
+          <span style="font-weight: 600; color: #333;">Payment Options</span>
+        </div>
+        <div class="answer">
+          <p><span style="font-size: 1.3rem; font-weight: 600; color: #333;">Select Branch:</span></p>
+          <select id="branch-select">
+            <option value="taguig">TAGUIG BRANCH</option>
+            <option value="pasig">PASIG BRANCH</option>
+          </select>
+  
+          <div id="taguig-option">
+            <p><span style="font-size: 1.3rem; font-weight: 600; color: #333;">TAGUIG BRANCH Payment Options</span></p>
+  
+            <div class="payment-option-icon">
+              <img src="./src/imagesSource/BDO-Icon.png" alt="icon" class="icon-pay">
+              <img src="./src/imagesSource/GCash_logo.svg" alt="icon" class="icon-pay">
+            </div>
+  
+            <p><span style="font-size: 1.3rem; font-weight: 600; color: #333;">1. Over the Counter</span></p>
+            <p>Visit our Finance office to make a payment.</p>
+            <p><strong>Location:</strong> 4th Floor Gate 3 Plaza, Lawton Avenue corner Juliano St.,<br>
+                AFPOVAI Phase III, Western Bicutan, Taguig City 1630</p>
+            <a href="[MAP LINK]" target="_blank">
+              <button>View Map</button>
+            </a>
+            <p><span style="font-size: 1.3rem; font-weight: 600; color: #333;">2. Deposit to Our <span style="color: #142972; font-size: 1.5rem;">BD</span><span style="color:#f0b118; font-size: 1.5rem;">O</span> Account</span></p>
+            <p>You can deposit your payment online or over the counter using our BDO account details: </p>
+            <p><strong>Account Name: </strong>ASIA SOURCE COLLEGE OF ARTS AND TECHNOLOGY INC.</p>
+            <p><strong>Account Number: </strong>007270069481</p>
+            <p>* Please make sure to keep your deposit slip as proof of payment and send it to us for verification.</p>
+            <p><span style="font-size: 1.3rem; font-weight: 600; color: #333;">3. GCash Bank Transfer</span></p>
+            <p>Use the GCash Bank Transfer feature to deposit to our BDO account online.</p>
+            <p><strong>After Making a Payment</strong></p>
+            <p>Please send a copy of your payment slip to [<span style="font-weight: 700; color: #1E38A8;"><a href="mailto:asiasource.query.taguig@gmail.com?subject=Transaction Email&body=Name of Student: ">asiasource.query.taguig@gmail.com</a></span>] with the following details:</p>
+            <ul>
+              <li>
+                <p><strong style="list-style: bullet;">Name of Student:</strong> Last Name, First Name, Middle Initial</p>
+              </li>
+              <li>
+                <p><strong>Description of Payment:</strong> Briefly describe the payment you made (e.g. tuition fee, miscellaneous fee, etc.)</p>   
+              </li>
+            </ul>
+          </div>
+  
+          <div id="pasig-option" style="display: none;">
+            <p><span style="font-size: 1.3rem; font-weight: 600; color: #333;">PASIG BRANCH Payment Options</span></p>
+  
+            <div class="payment-option-icon">
+              <img src="./src/imagesSource/BDO-Icon.png" alt="icon" class="icon-pay">
+              <img src="./src/imagesSource/GCash_logo.svg" alt="icon" class="icon-pay">
+            </div>
+  
+            <p><span style="font-size: 1.3rem; font-weight: 600; color: #333;">1. Over the Counter</span></p>
+            <p>Visit our Finance office to make a payment.</p>
+            <p><strong>Location:</strong> 3/F One Victoria Plaza, A. Mabini St. Kapasigan, Pasig City    </p>
+            <a href="[MAP LINK]" target="_blank">
+              <button>View Map</button>
+            </a>
+            <p><span style="font-size: 1.3rem; font-weight: 600; color: #333;">2. Deposit to Our <span style="color: #142972; font-size: 1.5rem;">BD</span><span style="color:#f0b118; font-size: 1.5rem;">O</span> Account</span></p>
+            <p>You can deposit your payment online or over the counter using our BDO account details: </p>
+            <p><strong>Account Name: </strong>ASIA SOURCE iCOLLEGE INC.</p>
+            <p><strong>Account Number: </strong>007278020229</p>
+            <p>* Please make sure to keep your deposit slip as proof of payment and send it to us for verification.</p>
+            <p><span style="font-size: 1.3rem; font-weight: 600; color: #333;">3. GCash Bank Transfer</span></p>
+            <p>Use the GCash Bank Transfer feature to deposit to our BDO account online.</p>
+            <p><strong>After Making a Payment</strong></p>
+            <p>Please send a copy of your payment slip to [<span style="font-weight: 700; color: #1E38A8;"><a href="mailto:asiasource.query.pasig@gmail.com?subject=Transaction Email&body=Name of Student: ">asiasource.query.pasig@gmail.com</a></span>] with the following details:</p>
+            <ul>
+              <li>
+                <p><strong style="list-style: bullet;">Name of Student:</strong> Last Name, First Name, Middle Initial</p>
+              </li>
+              <li>
+                <p><strong>Description of Payment:</strong> Briefly describe the payment you made (e.g. tuition fee, miscellaneous fee, etc.)</p>   
+              </li>
+            </ul>
+          </div>
+
+          <script>
+            const branchSelect = document.getElementById('branch-select');
+            branchSelect.addEventListener('change', function() {
+              const selectedBranch = branchSelect.value;
+              if (selectedBranch === 'taguig') {
+                document.getElementById('taguig-option').style.display = 'block';
+                document.getElementById('pasig-option').style.display = 'none';
+              } else if (selectedBranch === 'pasig') {
+                document.getElementById('taguig-option').style.display = 'none';
+                document.getElementById('pasig-option').style.display = 'block';
+              }
+                    });</script>
+            </div>
+            </div>
+
+            <div class="faq-item">
+            <div class="question">
+                <img src="/AsiaSourceiCollege/src/imagesSource/FAQ-DOWN.png" alt="Expand/Collapse">
+                <span style="font-weight: 600; color: #333;">How long does it take to process the application?</span>
+            </div>
+            <div class="answer">
+                <p>The processing time is typically 2-3 weeks.</p>
+            </div>
+            </div>
+            
+            
+        </div>
+        </div>
+
+            </div>
+        </form>
+    </div>
+    <script src="./JS/Asesssment.js"></script>
+</body>
+
+</html>

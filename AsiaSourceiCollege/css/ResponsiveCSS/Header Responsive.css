@@ -1,0 +1,539 @@
+@media (max-width: 1290px) 
+{
+/*HEADER*/
+  .Head
+{
+    height: 80px;
+    
+}
+
+/* ASIC-LOGO POSITION */
+.logo-pos
+{
+    width: 270px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+/* ASIC-LOGO */
+.asic-logo
+{
+    max-width:285px;
+    width:285vw;
+    height: 53px;   
+}
+
+/*NAV*/
+.active,  ul li .nav1 
+{
+    padding: 3px; 
+    min-height: 90px;
+    min-width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-left: 10px;   
+    padding-right: 10px;  
+    margin-left: 2px; 
+}  
+/*NAV:HOVERR*/
+.active, nav ul li .nav1:is(:hover,:focus)
+{
+    padding: 5px; 
+    font-size: 1rem;
+    font-weight: 700;
+    padding-left: 10px;   
+    padding-right: 10px;  
+    margin-left: 2px;
+    color:  #EFA81B;
+} 
+
+/* DROPDOWN Unordered List */
+
+header .dropdown_menu,
+header .dropdown_menu_admission,
+header .dropdown_menu_updates,
+header .dropdown_menu_programs
+{
+    margin-left: 3px;
+}
+
+
+  /*Search*/
+
+  .search-dropdown {
+    margin-right: 135px;
+  }
+
+  
+  /*Footer*/
+  .footer-section-partners img
+{
+  width: auto;
+  height: 35px;
+}
+
+.footer-w {
+    display: inline;
+    margin-bottom: 20px;
+  }
+
+.developed-by, .privacy-policy a, .copyright {
+    margin: 5px;
+    color: #3F1210;
+}
+
+ }
+
+
+
+/*1100 x 470*/
+
+
+
+
+@media (max-width: 1100px) 
+{
+    .Head
+    {
+        
+        height: 80px;
+       
+    }
+    
+    /* ASIC-LOGO POSITION */
+    .logo-pos
+    {
+        width: 270px;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+    /* ASIC-LOGO */
+    .asic-logo
+    {
+        max-width:265px;
+        width:265vw;
+        height: 48px;   
+    }
+
+     /*Search*/
+
+  .search-dropdown {
+    margin-right: 130px;
+  }
+
+  #search-input {
+    padding: 7px;
+  }
+  
+  #search-button {
+    padding: 6px;
+  }
+
+ 
+      /*FOOTER*/
+.footer-section summary,
+.footer-section details summary
+{
+    padding: 15px;
+}
+   
+}
+
+
+
+/*1050 x 522*/
+
+
+
+
+@media (max-width: 1050px) 
+{
+    /*NAV*/
+    .active,  ul li .nav1, .search-section 
+    {
+     display: none;
+    }  
+    .TOGGLE
+    {
+        display: flex;
+    }
+
+    .custom-menu-icon
+    {
+      display: flex;
+    }
+    .Head
+    {
+      position: relative;
+      margin-top: 0px;
+      height: 110px;
+      background: #3F1210;
+    }
+    .autoplay-toggle
+    {
+       margin-top: 10px;
+    }
+    /* ASIC-LOGO POSITION */
+    .logo-pos
+    {
+        width: 280px;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+    /* ASIC-LOGO */
+    
+    .asic-logo
+    {
+        max-width:290px;
+        width:290vw;
+        height: 56px;   
+    }
+
+    .custom-menu {
+      visibility: visible;
+    }
+
+      /*Footer*/
+      .footer-section-partners img
+      {
+        width: auto;
+        height: 45px;
+      }
+      .footer-bottom {
+        display: block;
+      }
+      .privacy-policy a {
+        padding-bottom: 20px;
+        color: #3F1210;
+    }
+    
+}
+
+
+
+/*920 x 470*/
+
+
+
+
+
+
+/*768 x 470*/
+
+
+@media (max-width: 768px) {
+    .footer-content, .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .footer-section {
+        min-width: 100%;
+    }
+  
+    .partner-logos {
+        margin-top: 10px;
+    }
+  
+    .partner-logos img {
+        margin-right: 5px;
+    }
+
+     /*Footer*/
+     .footer 
+     {
+       background: #3F1210;
+       padding: 10px;
+       text-align: center;
+     }
+
+     .footer-section-social-links
+     {
+       display: flex;
+     }
+     .footer-section-social-links h3
+     {
+       display: none;
+     }
+     .footer-content
+     {
+       margin: 25px;
+     }
+
+     .footer-section-social-links img
+     {
+       display: flex;
+       overflow: hidden;
+       width: 40px;
+       height: 40px;
+       margin-top: 0px;
+       margin-bottom: 0px;
+       margin-left: 25px;
+     }  
+
+     .footer-section-partners img
+     {
+       justify-content: center;
+       display: inline-flex;
+       width: auto;
+       height: 45px;
+       margin-top: 10px;
+       margin-left: 25px;
+       margin-right: 5px;
+     }     
+  }
+  
+  @media (max-width: 550px)
+  {
+    .custom-menu-icon {
+      margin-right: 0px;
+    }
+  
+  /* ASIC-LOGO POSITION */
+  .logo-pos
+  {
+      width: 270px;
+      margin-left: 50px;
+      margin-top: 10px;
+  }
+  /* ASIC-LOGO */
+  .asic-logo
+  {
+      max-width:270px;
+      width:270vw;
+      height: 48px;   
+  }
+  
+  /*Footer*/
+  
+  
+  .footer-section-social-links 
+  {
+    align-items: center;
+   margin-right: 30px;
+  }  
+  
+  .footer-section-social-links img
+  {
+    display: flex;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }  
+  
+  .footer-section-partners img
+  
+  {
+    justify-content: center;
+    display: inline-flex;
+    width: auto;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-right: 10px;
+  }      
+  
+  .addresses
+  {
+    text-align: left;
+  }
+  }
+    
+  
+  
+  /*480 x 470*/
+  
+  
+  
+  
+  @media (max-width: 480px)
+  {
+  
+  
+  .footer-section summary {
+    cursor: pointer;
+    background: rgb(0,0,0,0);
+    color: #EFA81B;
+    font-weight: 600;
+    padding: 10px;
+    margin-bottom: 2px;
+    outline: none;
+  }
+  
+   .quick-links{
+      text-align: left;
+      flex: 1;
+      min-width: 100%;
+  }
+  
+  .vision-mision
+  {
+    justify-content: start;
+    align-items: left;
+  }
+  
+  .footer-section details summary {
+    cursor: pointer;
+    background: #fff;
+    color: #3F1210;
+    font-weight: 600;
+    padding: 15px;
+    margin-bottom: 2px;
+    margin-right: 50px;
+    outline: none;
+    min-width: 100%;
+  }
+  
+  .footer-section {
+    justify-content: start;
+    align-items: left;
+    flex: 1;
+  }
+  .footer-section-social-links
+  {
+    justify-content: center;
+    display: flex;
+    color:#fff;
+  }
+  
+    .footer-section-social-links img
+    {
+      display: flex;
+      overflow: hidden;
+      margin-top: 10px;
+    margin-bottom: 15px;
+      width: 35px;
+      height: 35px;
+   
+    }  
+  
+  .footer-section-partners img
+  
+  {
+    justify-content: center;
+    display: inline-flex;
+    width: auto;
+    height: 33px;
+    margin-top: 10px;
+    margin-left: 20px;
+  } 
+
+  }
+    
+  
+  
+  /*425 x 470*/
+  
+  
+  
+  
+  @media (max-width: 425px)
+  {
+  
+    /* ASIC-LOGO POSITION */
+  .logo-pos
+  {
+      width: 250px;
+      margin-left: 30px;
+      margin-top: 10px;
+  }
+  /* ASIC-LOGO */
+  .asic-logo
+  {
+      max-width:250px;
+      width:250vw;
+      height: 46px;   
+  }
+  
+  .footer-section-social-links
+  {
+    justify-content: center;
+    display: block;
+    color:#fff;
+  }
+  
+    .footer-section-social-links img
+    {
+      display: flex;
+      overflow: hidden;
+      margin-top: 10px;
+    margin-bottom: 15px;
+      width: 35px;
+      height: 35px;
+   
+    }  
+    .footer-section-partners img
+  
+  {
+    justify-content: center;
+    display: inline-flex;
+    width: auto;
+    height: 28px;
+    margin-top: 10px;
+    margin-left: 20px;
+  } 
+  }
+    
+  
+  
+  /*375 x 470*/
+  
+  
+  
+  
+  @media (max-width: 375px)
+  {
+  
+     /* ASIC-LOGO POSITION */
+  .logo-pos
+  {
+      width: 250px;
+      margin-left: 30px;
+      margin-top: 10px;
+  }
+  /* ASIC-LOGO */
+  .asic-logo
+  {
+      max-width:200px;
+      width:200vw;
+      height: 40px;   
+  }
+  
+    .footer-section-social-links
+  {
+    justify-content: center;
+    display: block;
+    color:#fff;
+  }
+  
+    .footer-section-social-links img
+    {
+      display: flex;
+      overflow: hidden;
+      margin-top: 10px;
+    margin-bottom: 15px;
+      width: 35px;
+      height: 35px;
+   
+    }  
+    .footer-section-partners img
+  
+    {
+      justify-content: center;
+      display: inline-flex;
+      width: auto;
+      height: 25px;
+      margin-left: 5px;
+      margin-top: 10px;
+      margin-left: 10px;
+    } 
+    
+  }
+  
+  @media (max-width: 320px)
+  {
+   
+  
+  
+  }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Buttons</title>
+    <link rel="stylesheet" href="/AsiaSourceiCollege/css/buttons.css">
+    <link rel="stylesheet" href="/AsiaSourceiCollege/css/tmain.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+    <section class="category-section">
+        <div class="container">
+            <h1 class="title">Choose a Category</h1>
+            <div class="category-buttons">
+                <button class="category-button" data-category="Announcement" onclick="redirectToCategory('Announcement')">Announcement</button>
+                <button class="category-button" data-category="News" onclick="redirectToCategory('News')">News</button>
+                <button class="category-button" data-category="Events" onclick="redirectToCategory('Events')">Events</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <!-- Logo that expands into search -->
+                <div id="search-logo" class="nav1" onclick="toggleSearch()">
+                    <img src="/path/to/logo.png" alt="Search">
+                </div>
+                
+                <!-- Search dropdown -->
+                <div id="search-dropdown" class="search-dropdown hidden">
+                    <input type="text" id="search-input" placeholder="Search by title, date, or category">
+                    <button id="search-button">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let fadeOutTimeout;
+
+        function toggleSearch() {
+            const searchDropdown = document.getElementById('search-dropdown');
+            if (searchDropdown.classList.contains('hidden')) {
+                searchDropdown.classList.remove('hidden');
+                resetFadeOutTimer();
+            } else {
+                clearTimeout(fadeOutTimeout);
+                searchDropdown.classList.add('hidden');
+            }
+        }
+
+        function resetFadeOutTimer() {
+            clearTimeout(fadeOutTimeout);
+            fadeOutTimeout = setTimeout(() => {
+                document.getElementById('search-dropdown').classList.add('hidden');
+            }, 5000); // 5 seconds
+        }
+
+        document.getElementById('search-button').addEventListener('click', () => {
+            const searchInput = document.getElementById('search-input');
+            const searchQuery = searchInput.value.trim().toLowerCase();
+
+            // Redirect to school.html with search query
+            window.location.href = `/AsiaSourceiCollege/school.html?search=${searchQuery}`;
+        });
+
+        function redirectToCategory(category) {
+            window.location.href = `/AsiaSourceiCollege/school.html?category=${category}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchDropdown = document.getElementById('search-dropdown');
+            
+            // Reset fade out timer on hover
+            searchDropdown.addEventListener('mouseover', () => {
+                clearTimeout(fadeOutTimeout);
+            });
+
+            searchDropdown.addEventListener('mouseout', () => {
+                resetFadeOutTimer();
+            });
+        });
+
+        // Close search dropdown when clicking outside of it
+        document.addEventListener('mouseup', (event) => {
+            const searchDropdown = document.getElementById('search-dropdown');
+            if (!searchDropdown.contains(event.target) && !document.getElementById('search-logo').contains(event.target)) {
+                searchDropdown.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

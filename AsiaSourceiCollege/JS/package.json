@@ -1,0 +1,24 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "main": "admission.js",
+  "scripts": {
+    "start": "node admission.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "admission",
+    "form",
+    "nodejs"
+  ],
+  "author": "luk",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "nodemailer": "^6.9.16",
+    "pdfmake": "^0.2.10"
+  }
+}

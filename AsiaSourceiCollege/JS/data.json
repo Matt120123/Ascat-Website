@@ -1,0 +1,14 @@
+{
+    "announcements": [
+        {"title": "New Semester Start", "date": "2024-08-01", "content": "The new semester will start on August 1st."},
+        {"title": "Holiday Schedule", "date": "2024-12-20", "content": "The school will be closed for the holidays from December 20th to January 2nd."}
+    ],
+    "events": [
+        {"title": "Science Fair", "date": "2024-09-15", "description": "Join us for the annual science fair."},
+        {"title": "Sports Day", "date": "2024-10-10", "description": "Come and participate in our sports day events."}
+    ],
+    "news": [
+        {"title": "New Library Opened", "date": "2024-07-01", "summary": "Our new state-of-the-art library is now open."},
+        {"title": "School Achievements", "date": "2024-06-20", "summary": "Our school has been awarded the best educational institution of the year."}
+    ]
+}
